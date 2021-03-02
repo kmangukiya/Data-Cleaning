@@ -1,25 +1,27 @@
-#include "binarySearch.h"
+#include "Filter.h"
 #include<fstream>
+#include<bits/stdc++.h> 
+
 //constructors
-binarySearch::binarySearch()
+Filter::Filter()
 {
     string words[1000]; 
     n=999;
 }
 
-binarySearch::binarySearch(const binarySearch & param)
+Filter::Filter(const Filter & param)
 {
      words[1000] = param.words[1000];
      n = param.n;
 }
 
-binarySearch:: ~binarySearch()
+Filter:: ~Filter()
 {
     
 }
  // Methods
  
-void binarySearch::read()
+void Filter::readtop1000()
 
 {
     
@@ -35,9 +37,12 @@ void binarySearch::read()
   
 }
  
-int binarySearch::binarySearchString(string x)
+int Filter::FilterString(string x)
 
 {
+   string sl=x; 
+   transform(sl.begin(), sl.end(), sl.begin(), ::tolower); 
+   x = sl;
    int lower = 0;
    int upper = n - 1;
    while (lower <= upper) {
@@ -55,9 +60,9 @@ int binarySearch::binarySearchString(string x)
    return -1;
 }
 
-bool binarySearch::found(string x)
+bool Filter::binarysearch(string x)
 {
-    if(binarySearchString(x)==-1)
+    if(FilterString(x)==-1)
     {
         return false;
     }
