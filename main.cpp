@@ -85,11 +85,11 @@ int main()
                         }
                         
                     word = str;
-                    output<<word<<" ";//<<std::flush;  
+                    output<<word<<" ";  
                     }
                 
                 }
-             output<<"\n";//<<std::flush;    
+             output<<"\n"; 
             }
             
          

@@ -10,12 +10,13 @@ class Filter
    ~Filter();
 
    // Methods
-   int FilterString(string x);
+   int FilterString(string words[], int low, int high, string sl);
    bool binarysearch(string y);
    void readtop1000();
    //bool properword
 
  private:
     string words[1000];
-    int n;
+    int high;
+    int low;
 };
